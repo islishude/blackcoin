@@ -568,6 +568,7 @@ func shallowCopyTx(tx *wire.MsgTx) wire.MsgTx {
 		TxIn:     make([]*wire.TxIn, len(tx.TxIn)),
 		TxOut:    make([]*wire.TxOut, len(tx.TxOut)),
 		LockTime: tx.LockTime,
+		Time:     tx.Time,
 	}
 	txIns := make([]wire.TxIn, len(tx.TxIn))
 	for i, oldTxIn := range tx.TxIn {
